@@ -1,0 +1,187 @@
+/* ===== Variables ===== */
+:root {
+    --color-border: rgba(0, 0, 0, 0.7);
+    --color-dark-green: rgb(1, 29, 27);
+    --color-accent-green: rgba(18, 78, 60, 0.692);
+    --color-panel-bg: rgba(240, 248, 255, 0.562);
+    --color-text-light: aliceblue;
+}
+
+/* ===== Reset / base ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-accent-green);
+}
+
+main {
+    flex: 1;
+}
+
+/* ===== Utilidades ===== */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ===== Header ===== */
+header {
+    padding-left: 40px;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    border-bottom: solid 2px var(--color-border);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    background-color: var(--color-text-light);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* ===== Sección: objetivo del proyecto ===== */
+.aim {
+    color: var(--color-text-light);
+    background-color: rgba(1, 29, 27, 0.5);
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.aim h2 {
+    font-size: 1.7rem;
+}
+
+.aim p {
+    font-size: 1.1rem;
+}
+
+/* ===== Sección: formulario de tareas ===== */
+.task, .task-list {
+    margin: 40px;
+    background-color: var(--color-panel-bg);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn-eliminar {
+    background-color: rgb(178, 34, 34);
+    color: white;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: rgb(139, 0, 0);
+}
+
+#list li {
+    cursor: pointer;
+}
+
+#task-form {
+    display: flex;
+    gap: 20px;
+}
+
+#task-form input {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--color-dark-green);
+    color: white;
+}
+.input-editar {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: rgb(1, 29, 27);
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+}
+#task-form input::placeholder {
+    color: var(--color-text-light);
+}
+
+#task-form input:focus {
+    outline: 2px solid var(--color-text-light);
+    outline-offset: 2px;
+}
+#list li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#task-form button {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--color-dark-green);
+    color: var(--color-text-light);
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    color: rgb(2, 134, 126);
+}
+
+#task-form button:focus {
+    outline: 2px solid var(--color-text-light);
+    outline-offset: 2px;
+}
+
+/* ===== Sección: filtros de tareas ===== */
+.filters button {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px dashed var(--color-border);
+    cursor: pointer;
+}
+
+.filters button:hover {
+    color: var(--color-accent-green);
+}
+
+.filters button:focus {
+    outline: 2px solid var(--color-dark-green);
+    outline-offset: 2px;
+}
+
+/* ===== Footer ===== */
+footer {
+    padding-left: 40px;
+    display: flex; 
+    height: 80px;
+    align-items: center;
+    border-top: solid 2px var(--color-border);
+}

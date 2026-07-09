@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas con persistencia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            Gerhard<strong>Dev</strong>
+        </h1>
+    </header>
+    <main>
+        <section class="aim">
+            <h2>APP de Tareas</h2>
+            <p>Este proyecto se hizo con HTML, CSS y JS vanilla, sin frameworks.</p>
+        </section>
+        <section class="task">
+            <form id="task-form">
+                <label for="task-input" class="visually-hidden">Nueva tarea</label>
+                <input type="text" id="task-input" placeholder="Escribe una tarea..." required>
+                <button type="submit" id="btn">Agregar</button>
+            </form>
+        </section>
+        <section class="task-list">
+            <div class="filters">
+                <button type="button" data-filter="all">Todas</button>
+                <button type="button" data-filter="pending">Pendientes</button>
+                <button type="button" data-filter="completed">Completadas</button>
+            </div>
+            <p id="counter">0 tareas pendientes</p>
+            <ul id="list"></ul>
+        </section>
+    </main>
+    <footer>
+        &copy; Gerhard Ediver Saavedra Pretell
+    </footer>
+</body>
+</html>
