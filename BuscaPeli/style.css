@@ -1,0 +1,133 @@
+:root {
+    --blanco:white;
+    --borde:rgba(0, 0, 0, 0.7);
+    --fondo:rgb(179, 17, 17);
+    --fondo-otro:rgb(179, 17, 17, 0.6);
+    --negro:rgb(0,0,0);
+    --fondo-blanco:rgba(255, 255, 255, 0.6)
+}
+
+html, body {
+    margin:0;
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.938)), url(1155.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    display: flex;
+    border-bottom: 1px solid var(--borde);
+    padding: 20px;
+    background-color: rgb(179, 17, 17);
+}
+
+header span {
+    font-size: 1.5rem;
+    background-color: var(--blanco);
+    padding: 4px;
+    border-radius: 20px;
+}
+
+footer {
+    display: flex;
+    border-top: 1px solid var(--borde);
+    padding: 20px;
+    background-color: var(--fondo);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hero {
+    display: flex;
+    border: 1px solid var(--negro);
+    background-color: var(--fondo-otro) ;
+    justify-content: center;
+    margin: 80px auto;
+    padding: 10px 40px;
+    border-radius: 40px;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color:var(--blanco)
+}
+
+.hero p {
+    font-size: 1rem;
+    color:var(--blanco)
+}
+
+#buscador {
+    display: flex;
+    border: 1px solid var(--negro);
+    background-color: var(--fondo-otro);
+    width: fit-content;
+    justify-content: center;
+    margin:auto;
+    padding: 20px;
+    border-radius: 10px;
+    gap:20px
+}
+
+#btn {
+    font-size: 0.9rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    border-radius: 10px;
+}
+
+#busca {
+    border: 1px solid var(--negro);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#resultado {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: var(--fondo-blanco);
+    gap: 20px;
+    padding:20px
+}
+
+#resultado article {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: center;
+}
